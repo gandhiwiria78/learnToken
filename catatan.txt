@@ -2,7 +2,10 @@ Truffle – IDE/TOOLS untuk mengintegrasikan kompilasi, pengujian, dan penerapan
 Ganache – Ini adalah simulator Blockchain yang diterapkan secara lokal. Ganache menampilkan antarmuka pengguna grafis yang dapat mensimulasikan jaringan Blockchain dan menguji langsung Kontrak Cerdas tanpa mengharuskan Anda menyiapkan jaringan uji nyata atau menggunakan jaringan jarak jauh.   
 Gerimis – Ini adalah bermacam-macam perpustakaan ujung depan yang menawarkan komponen yang berguna untuk mengembangkan aplikasi web yang dapat terhubung secara mulus dengan Kontrak Cerdas. 
 
+untuk menggunakan truffle harus di setup di truffle-config.js contoh untuk setup pada local block lihat diproject ini.
+
 cmd truffles yang dipakai 
-- cmd : truffles init (untuk menginstall truffles di sebuah project lainnya)
-= cmd : truffles compile (untuk cek dan mengubah menjadi bentuk json  )
-- cmd : truffles migrate (untuk mendeploy smart kontrk ke blokchain)
+- cmd : truffle init (untuk menginstall truffles di sebuah project lainnya)
+= cmd : truffle compile (untuk cek dan mengubah menjadi bentuk json  )
+- cmd : truffle migrate (untuk mendeploy smart kontrk ke blokchain)
+- cmd : truffle console (untuk test dengan cmd seperti node js )
