@@ -23,6 +23,21 @@ contract ERC721{
     // Mapping dari owner jumlah token 
     mapping(address=> uint256) private _OwnerTokenCount;
 
+    // menghitung  jumlah  NTFs yang sudah diterima owner
+    // _owner adalah alamat pemilik untuk cek saldo 
+    function balanceOf(address _owner)public view returns(uint256){
+        require(_owner != address(0), 'owner query for non-existent token' );
+        return _OwnerTokenCount[_owner];
+    }
+
+    //Cek address pemilik token 
+    function ownerOf(uint256 _tokenId) external view returns(address) {
+        address owner = _tokenOwner[_tokenId];
+        require(owner != address(0),'owner query for non-existent token');
+        return owner;
+    }
+
+
     function _exist(uint256 tokenID) internal view returns(bool){
         address owner =_tokenOwner[tokenID]; 
         return owner != address(0);
