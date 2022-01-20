@@ -14,6 +14,7 @@ contract ERC721metadata {
      function name() external view returns(string memory){
           return _name;
      }
+     
      function symbol() external view returns(string memory){
           return _symbol;
      }

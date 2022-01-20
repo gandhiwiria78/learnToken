@@ -16,8 +16,7 @@ contract Migrations {
     );
     _;
     /*
-    cara cepat(shortcut code) untuk melanjutkan ke function berikutnya (yaitu function setCompleted();)
-    
+    _; shortcut code untuk melanjutkan ke function berikutnya yaitu function setCompleted();
     */
   }
 
@@ -26,9 +25,10 @@ contract Migrations {
     last_completed_migration = completed;
   }
 
-  // untuk mengupgrade kontrak , 
+  // untuk mengupgrade kontrak , Dengan address yang baru 
   function upgrade(address new_address) public restricted {
     Migrations upgraded= Migrations(new_address); //membuat variable dengan kontrak ini sendiri dan menyimpanan new address 
     upgraded.setCompleted(last_completed_migration); // set kembali set completed kembali untuk cek sender == owner
+    
   }
 }
